@@ -1,1 +1,46 @@
+Charter
+Explore the UI and functionality of the Monefy app on iOS platform to discover its bugs and any unclear user journey flow and functions.
 
+Areas 
+- Explore the Expense feature
+- Explore the Income feature
+- Explore the Transfer feature
+- Explore the Balance feature
+- Explore the Category feature
+- Explore the Account feature
+- Explore the Currency feature
+- Explore the Settings feature
+- Explore the Search feature
+- Explore the Filter feature
+
+Strategy 
+- Priority 0 (P0)
+  - Create new expense data from button “-” on the bottom of the screen
+  - Create new expense data from several flash card categories
+  - Create new income data from button “+” on the bottom of the screen
+  - Create new transfer data from top menu navigation
+  - Create new transfer data from Account menu on the right side menu navigation
+  - Verify account balance amount from various transactions, include expense, income, and transfer
+- Priority 1 (P1)
+  -
+  
+ Out-of-scope
+ - 
+ 
+ Risk Mitigation
+ -
+ 
+ Start
+ 6 June 2022 
+ 
+ Reference / Files
+ 
+ Test Notes
+ 
+ Bugs
+ 
+ New Ideas / Improvement
+ 
+ Conclusion
+ 
+ 
