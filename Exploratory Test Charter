@@ -8,7 +8,6 @@ Areas:
 - Explore the Balance feature
 - Explore the Category feature
 - Explore the Account feature
-- Explore the Currency feature
 - Explore the Settings feature
 - Explore the Search feature
 - Explore the Filter feature
@@ -25,7 +24,7 @@ Strategy:
   -
   
  Out-of-scope:
- - 
+ - Currency feature (need unlock app version)
  
  Risk Mitigation:
  -
@@ -34,9 +33,9 @@ Strategy:
  6 June 2022 10:00 AM
  
  Time Breakdown:
- - Duration: 
- - Test Design & Execution:
- - Bugs Investigation & Reporting:
+ - Duration: 120 minutes (Long)
+ - Test Design & Execution: 90 minutes
+ - Bugs Investigation & Reporting: 30 minutes
  
  
  Reference / Files
