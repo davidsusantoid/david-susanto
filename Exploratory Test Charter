@@ -39,12 +39,17 @@ Strategy:
  
  
  Reference / Files
+ - https://monefy.me/
+ - https://itunes.apple.com/us/app/monefy-money-manager/id1212024409?
  
  Test Notes
  
  Bugs
+ - Enter category name was not cleared even after click cancel button on create new category page
+
  
  New Ideas / Improvement
+ - No nominal separator based on currency selected
  
  Conclusion
  
