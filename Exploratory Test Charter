@@ -1,7 +1,7 @@
-Charter
+Charter:
 Explore the UI and functionality of the Monefy app on iOS platform to discover its bugs and any unclear user journey flow and functions.
 
-Areas 
+Areas: 
 - Explore the Expense feature
 - Explore the Income feature
 - Explore the Transfer feature
@@ -13,7 +13,7 @@ Areas
 - Explore the Search feature
 - Explore the Filter feature
 
-Strategy 
+Strategy: 
 - Priority 0 (P0)
   - Create new expense data from button “-” on the bottom of the screen
   - Create new expense data from several flash card categories
@@ -24,14 +24,20 @@ Strategy
 - Priority 1 (P1)
   -
   
- Out-of-scope
+ Out-of-scope:
  - 
  
- Risk Mitigation
+ Risk Mitigation:
  -
  
- Start
- 6 June 2022 
+ Start:
+ 6 June 2022 10:00 AM
+ 
+ Time Breakdown:
+ - Duration: 
+ - Test Design & Execution:
+ - Bugs Investigation & Reporting:
+ 
  
  Reference / Files
  
