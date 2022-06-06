@@ -78,6 +78,15 @@ public class User {
         Assert.assertEquals(200, response.getStatusCode());
     }
 
+    @When("Delete username <userName> with invalid input")
+    public void deleteUserNameWithInvalidInput(int userName) {
+        RestAssured.baseURI = BASE_URL;
+        RequestSpecification requestSpecification = RestAssured.given();
+        response = requestSpecification.delete("/user/" + userName);
+
+        Assert.assertEquals(400, response.getStatusCode());
+    }
+
 
 
     @Then("Username {string} is found")
@@ -116,5 +125,14 @@ public class User {
 
         Assert.assertEquals(404, response.getStatusCode());
         Assert.assertEquals("User not found", jsonString);
+    }
+
+    @Then("Get username <userName> with invalid input")
+    public void getUserNameWithInvalidInput(int userName) {
+        RestAssured.baseURI = BASE_URL;
+        RequestSpecification requestSpecification = RestAssured.given();
+        response = requestSpecification.get("/user/" + userName);
+
+        Assert.assertEquals(400, response.getStatusCode());
     }
 }

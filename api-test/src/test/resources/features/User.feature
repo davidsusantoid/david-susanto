@@ -14,7 +14,12 @@ Feature: User
 
   Scenario: Verify successful add list of users function
 
-  Scenario: Verify delete function with invalid input
+  Scenario Outline: Verify delete function with invalid input
+    When Delete username <userName> with invalid input
+    Then Get username <userName> with invalid input
+    Examples: :
+    | userName |
+    | 1234     |
 
   Scenario: Verify delete function for user not found
 
