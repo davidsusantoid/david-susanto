@@ -69,7 +69,6 @@ public class Store {
         RequestSpecification requestSpecification = RestAssured.given();
         response = requestSpecification.delete("/store/order/" + orderId);
 
-        String jsonString = response.asString();
         Assert.assertEquals(200, response.getStatusCode());
     }
 
