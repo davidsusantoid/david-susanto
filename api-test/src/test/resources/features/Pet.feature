@@ -83,3 +83,7 @@ Feature: Pet
     Examples:
       | petId | petName | tagName | status    |
       | 5586  | dog     | tag5586 | available |
+
+  Scenario: Verify sucessful upload an image function
+
+  Scenario: Verify upload image function with error status
