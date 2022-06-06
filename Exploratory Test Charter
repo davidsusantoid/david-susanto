@@ -61,6 +61,8 @@ Strategy:
  
  Bugs
  - Enter category name was not cleared even after click cancel button on create new category page
+ - Intermittent issue several times when create new income/expense but not recorded and balance was deducted. But when try to reproduce the issue, it is working as expected.
+ - No cancel button when editing income/expense transaction.
  
  New Ideas / Improvement
  - No nominal separator based on currency selected
@@ -72,5 +74,3 @@ Strategy:
  Conclusion
  - No critial issues/bugs found during this testing. Mostly app working as expected according to general logic.
  - There are still so many room for improvement as mention in New Ideas/Improvement section to avoid ambiguity on user journey.
- 
- 
