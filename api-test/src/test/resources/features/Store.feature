@@ -8,7 +8,7 @@ Feature: Store
     Then Order ID <orderId> is not found
     Examples:
       | orderId  |
-      | 5586     |
+      | 303     |
 
   Scenario Outline: Verify add and get order ID function with invalid input
     When Add new order by ID with invalid input "<invalidOrderId>"
@@ -30,6 +30,6 @@ Feature: Store
     Then Order ID <orderId> is not found
     Examples:
       | orderId |
-      | 5586    |
+      | 303    |
 
   Scenario: Verify get pet inventories by status

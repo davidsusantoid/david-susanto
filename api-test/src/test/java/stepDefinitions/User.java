@@ -15,17 +15,17 @@ public class User {
 
     private static Response response;
 
-    @When("Add new username {string}")
-    public void addNewUserName(String userName) {
+    @When("Add new username {string} and password {string}")
+    public void addNewUserName(String userName, String password) {
         RestAssured.baseURI = BASE_URL;
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.header("Content-Type", "application/json");
-        String reqBody = "{\"id\":5586," +
+        String reqBody = "{\"id\":303," +
             "\"username\":\"" + userName + "\"," +
             "\"firstName\":\"John\"," +
             "\"lastName\":\"James\"," +
             "\"email\":\"john@email.com\"," +
-            "\"password\":\"12345\"," +
+            "\"password\":\"" + password + "\"," +
             "\"phone\":\"12345\"," +
             "\"userStatus\":1}";
         response = requestSpecification.body(reqBody).post("/user");
@@ -40,7 +40,7 @@ public class User {
         RestAssured.baseURI = BASE_URL;
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.header("Content-Type", "application/json");
-        String reqBody = "{\"id\":5586," +
+        String reqBody = "{\"id\":303," +
                 "\"username\":\"" + userName + "\"," +
                 "\"firstName\":\"John\"," +
                 "\"lastName\":\"James\"," +
@@ -85,6 +85,15 @@ public class User {
         response = requestSpecification.delete("/user/" + userName);
 
         Assert.assertEquals(400, response.getStatusCode());
+    }
+
+    @When("Delete username {string} for user not found")
+    public void deleteUserNameForUserNotFound(String userName) {
+        RestAssured.baseURI = BASE_URL;
+        RequestSpecification requestSpecification = RestAssured.given();
+        response = requestSpecification.delete("/user/" + userName);
+
+        Assert.assertEquals(404, response.getStatusCode());
     }
 
 
@@ -134,5 +143,14 @@ public class User {
         response = requestSpecification.get("/user/" + userName);
 
         Assert.assertEquals(400, response.getStatusCode());
+    }
+
+    @Then("Login with username {string} and password {string}")
+    public void loginWithUserNameAndPassword(String userName, String password) {
+        RestAssured.baseURI = BASE_URL;
+        RequestSpecification requestSpecification = RestAssured.given();
+        response = requestSpecification.get("/user/login?username=" + userName + "&password=" + password);
+
+        Assert.assertEquals(200, response.getStatusCode());
     }
 }
