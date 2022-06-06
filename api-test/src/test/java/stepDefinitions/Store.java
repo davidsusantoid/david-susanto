@@ -73,6 +73,24 @@ public class Store {
         Assert.assertEquals(200, response.getStatusCode());
     }
 
+    @When("Delete order by ID with invalid input {string}")
+    public void deleteOrderIDwithInvalidInput(String invalidOrderId) {
+        RestAssured.baseURI = BASE_URL;
+        RequestSpecification requestSpecification = RestAssured.given();
+        response = requestSpecification.delete("/store/order/" + invalidOrderId);
+
+        Assert.assertEquals(400, response.getStatusCode());
+    }
+
+    @When("Delete order by ID for order not found {int}")
+    public void deleteOrderIDForOrderNotFound(int orderId) {
+        RestAssured.baseURI = BASE_URL;
+        RequestSpecification requestSpecification = RestAssured.given();
+        response = requestSpecification.delete("/store/order/" + orderId);
+
+        Assert.assertEquals(200, response.getStatusCode());
+    }
+
 
 
     @Then("Order ID {int} is found")
