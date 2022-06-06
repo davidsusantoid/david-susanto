@@ -50,10 +50,15 @@ Strategy:
  - Test Execution: 180 minutes
  - Bugs Investigation & Reporting: 30 minutes
  
- 
  Reference / Files
  - https://monefy.me/
  - https://itunes.apple.com/us/app/monefy-money-manager/id1212024409?
+ 
+ Risk Mitigation:
+ - App functionality
+ - Data accuracy
+ - UI/UX
+ - App performance
  
  Test Notes
  - Monefy app version 1.3.30 (trial version)
