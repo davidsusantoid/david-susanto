@@ -15,6 +15,24 @@ public class User {
 
     private static Response response;
 
+    @Given("Login with the loginUser {string}")
+    public void loginWithTheUser(String theUser) {
+        RestAssured.baseURI = BASE_URL;
+        RequestSpecification requestSpecification = RestAssured.given();
+        response = requestSpecification.get("/user/login?username=" + theUser + "&password=12345");
+
+        Assert.assertEquals(200, response.getStatusCode());
+    }
+
+    @Given("Logout current login user")
+    public void logoutUserIfLogin() {
+        RestAssured.baseURI = BASE_URL;
+        RequestSpecification requestSpecification = RestAssured.given();
+        response = requestSpecification.get("/user/logout");
+
+        Assert.assertEquals(200, response.getStatusCode());
+    }
+
     @When("Add new username {string} and password {string}")
     public void addNewUserName(String userName, String password) {
         RestAssured.baseURI = BASE_URL;
@@ -78,7 +96,7 @@ public class User {
         Assert.assertEquals(200, response.getStatusCode());
     }
 
-    @When("Delete username <userName> with invalid input")
+    @When("Delete username with invalid input {int}")
     public void deleteUserNameWithInvalidInput(int userName) {
         RestAssured.baseURI = BASE_URL;
         RequestSpecification requestSpecification = RestAssured.given();
