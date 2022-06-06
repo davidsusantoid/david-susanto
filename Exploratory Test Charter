@@ -18,23 +18,36 @@ Strategy:
   - Create new expense data from several flash card categories
   - Create new income data from button “+” on the bottom of the screen
   - Create new transfer data from top menu navigation
-  - Create new transfer data from Account menu on the right side menu navigation
+  - Create new transfer data from Account menu on the right-side menu navigation
   - Verify account balance amount from various transactions, include expense, income, and transfer
 - Priority 1 (P1)
-  -
+  - Create new, edit, delete, enable, disable, and merge category function from right-side menu navigation
+  - Create new, edit, delete, enable, disable, and merge account function from right-side menu navigation
+  - Verify following functions from edit account page: include in balance, initial account balance, and initial balance date
+  - Verify following functions from setting menu: budget mode, carry over, future recurring records, change app language, first day of week, first day of month, review application, export to file, about monefy, and copy purchase ID
+  - Verify following data backup function from setting menu: create data backup, restore data, and clear data
+- Priority 2 (P2)
+  - Verify search function using some keywords
+  - Verify filter function using several parameters: by account, by day, by week, by month, by year, by internal, by choosen date, by all data
   
  Out-of-scope:
  - Currency feature (need unlock app version)
+ - Exchange rate feature (need unlock app version)
+ - Unlock Monefy
+ - Dark theme (need unlock app version)
+ - Passcode protection (need unlock app version)
+ - Synchronization with Google Drive and Dropbox (need unlock app version)
  
- Risk Mitigation:
- -
+ Tester: 
+ David
  
  Start:
  6 June 2022 10:00 AM
  
  Time Breakdown:
- - Duration: 120 minutes (Long)
- - Test Design & Execution: 90 minutes
+ - Duration: 240 minutes (Long)
+ - Test Design: 30 minutes
+ - Test Execution: 180 minutes
  - Bugs Investigation & Reporting: 30 minutes
  
  
@@ -43,14 +56,21 @@ Strategy:
  - https://itunes.apple.com/us/app/monefy-money-manager/id1212024409?
  
  Test Notes
+ - Monefy app version 1.3.30 (trial version)
+ - iPhone device 11 Pro Max (64 GB), iOS version 15.5
  
  Bugs
  - Enter category name was not cleared even after click cancel button on create new category page
-
  
  New Ideas / Improvement
  - No nominal separator based on currency selected
+ - Only allow 9 digit nominal no matter what the currency, could be a problem for some currency that have bigger digits
+ - Lack of alert. For example no alert when user do divided numbers with zero
+ - Not flexible recurring options. For example: no hourly, no every three weeks, no every four months, no every five months, etc.
+ - Not flexible reminder options. For example: no reminder for hourly, no reminder for n-days before, no reminder for n-weeks before, etc.
  
  Conclusion
+ - No critial issues/bugs found during this testing. Mostly app working as expected according to general logic.
+ - There are still so many room for improvement as mention in New Ideas/Improvement section to avoid ambiguity on user journey.
  
  
